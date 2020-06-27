@@ -79,7 +79,7 @@ with open(Results_output, 'w') as txtfile:
     txtfile.write(f"Khan: {Khan_percentage} (${total_vote_khan})\n")
     txtfile.write(f"Correy: {Correy_percentage} (${total_vote_correy})\n")
     txtfile.write(f"Li: {Li_percentage} (${total_vote_li})\n")
-    txtfile.write(f"O'Tooley: {tooley_percentage} (${total_vote_tooley}\n)")
+    txtfile.write(f"O'Tooley: {tooley_percentage} (${total_vote_tooley})\n")
     txtfile.write(f"Winner: {winner_name}")
     
 
