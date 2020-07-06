@@ -1,15 +1,19 @@
+#Import dependencies 
+
 import os
 import csv 
 
+#Reference file path
 PyPoll = os.path.join("Resources", "election_data.csv")
 
+#Read CSV File 
 with open(PyPoll) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
     print(csvreader)
 
     csv_header = next(csvreader)
-
+ #Assign variables 
     vote_count = 0
     Khan_vote = []
     Correy_vote = []
@@ -58,7 +62,7 @@ with open(PyPoll) as csvfile:
         elif final_winner == total_vote_tooley:
             winner_name = "O""'""Tooley"
             
-
+#print results. Output in dollars not votes
 print(f"Election Results")
 print(f"------------------------")
 print(f"Total Votes: {(vote_count)}")
@@ -71,6 +75,7 @@ print(f"Winner: {winner_name}")
 
 Results_output = os.path.join("PyPollResults.txt")
 
+#Output to text file
 with open(Results_output, 'w') as txtfile:
     txtfile.write(f"Election Results\n")
     txtfile.write(f"------------------------")
